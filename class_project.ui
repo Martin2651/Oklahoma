@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1089</width>
+    <height>805</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>PTP Report Generator </string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(154, 153, 150);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="9" column="10" colspan="4">
+     <widget class="QLabel" name="f_jack">
+      <property name="styleSheet">
+       <string notr="true">image: url(:/test/PNG.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="2" colspan="2">
+     <widget class="QComboBox" name="classification_combobox">
+      <item>
+       <property name="text">
+        <string>Unclassified </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Secret</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Top Secret</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="4" column="5">
+     <widget class="QLabel" name="rx_call_sign_label">
+      <property name="text">
+       <string>RX CALL SIGN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QLineEdit" name="radio_type_input"/>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QLabel" name="rx_freq_label">
+      <property name="text">
+       <string>RX FREQ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="0" colspan="3">
+     <widget class="QLabel" name="location_label">
+      <property name="text">
+       <string>LOCATION</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="10">
+     <widget class="QLineEdit" name="tx_radio_id_input">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="2" colspan="2">
+     <widget class="QDoubleSpinBox" name="tx_freq_input">
+      <property name="suffix">
+       <string>MHz</string>
+      </property>
+      <property name="decimals">
+       <number>3</number>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="7">
+     <widget class="QLineEdit" name="tx_callsign_input">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="10">
+     <widget class="QLineEdit" name="encryption_input">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="0">
+     <widget class="QLabel" name="radio_type_label">
+      <property name="text">
+       <string>RADIO TYPE </string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QLabel" name="tx_freq_label">
+      <property name="text">
+       <string>TX FREQ</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2" colspan="2">
+     <widget class="QDoubleSpinBox" name="rx_freq_input">
+      <property name="suffix">
+       <string> MHZ</string>
+      </property>
+      <property name="decimals">
+       <number>4</number>
+      </property>
+      <property name="maximum">
+       <double>1000000.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="5" colspan="2">
+     <widget class="QLabel" name="tx_call_sign_label">
+      <property name="text">
+       <string>TX CALL SIGN</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="8" colspan="2">
+     <widget class="QLabel" name="encryption_label">
+      <property name="text">
+       <string>ENCRYPTION</string>
+      </property>
+     </widget>
+    </item>
+    <item row="12" column="0" colspan="14">
+     <widget class="QTextEdit" name="report_text_output"/>
+    </item>
+    <item row="4" column="13">
+     <widget class="QLineEdit" name="color_code_input"/>
+    </item>
+    <item row="2" column="8" colspan="2">
+     <widget class="QLabel" name="tx_radio_id_label">
+      <property name="text">
+       <string>TX RADIO ID</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="12">
+     <widget class="QLabel" name="color_code">
+      <property name="text">
+       <string>COLORCODE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="10">
+     <widget class="QLineEdit" name="rx_radio_id_input">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="7">
+     <widget class="QLineEdit" name="rx_callsign_input">
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="5">
+     <widget class="QLabel" name="Technology_label">
+      <property name="text">
+       <string>TECHNOLOGY</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="0">
+     <widget class="QLabel" name="gist_label">
+      <property name="text">
+       <string>GIST</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="12">
+     <widget class="QPushButton" name="genname">
+      <property name="text">
+       <string>Generate Report</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="7">
+     <widget class="QLineEdit" name="tech_input"/>
+    </item>
+    <item row="0" column="5">
+     <widget class="QLabel" name="date_time_label">
+      <property name="text">
+       <string>DATE/TIME</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6" colspan="3">
+     <widget class="QDateTimeEdit" name="dateTimeEdit">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="showGroupSeparator" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="dateTime">
+       <datetime>
+        <hour>12</hour>
+        <minute>0</minute>
+        <second>0</second>
+        <year>2024</year>
+        <month>1</month>
+        <day>1</day>
+       </datetime>
+      </property>
+      <property name="date">
+       <date>
+        <year>2024</year>
+        <month>1</month>
+        <day>1</day>
+       </date>
+      </property>
+      <property name="displayFormat">
+       <string>yyyyMMdd HHmm</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="13">
+     <widget class="QLineEdit" name="talk_group_input"/>
+    </item>
+    <item row="3" column="11" rowspan="2" colspan="2">
+     <widget class="QLabel" name="color_code_label">
+      <property name="text">
+       <string>COLOR CODE</string>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <widget class="QLineEdit" name="location_input">
+      <property name="text">
+       <string>MGRS</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="8" colspan="2">
+     <widget class="QLabel" name="rx_radio_id_label">
+      <property name="text">
+       <string>RX RADIO ID</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Classification:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="11" colspan="2">
+     <widget class="QLabel" name="talk_group_label">
+      <property name="text">
+       <string>TALK GROUP</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QCheckBox" name="txrx_checkbox">
+      <property name="text">
+       <string>Tx Freq = Rx</string>
+      </property>
+     </widget>
+    </item>
+    <item row="9" column="1" colspan="8">
+     <widget class="QTextEdit" name="gist_input">
+      <property name="styleSheet">
+       <string notr="true">border-color: rgb(0, 0, 0);</string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="0">
+     <widget class="QLabel" name="filename_label">
+      <property name="text">
+       <string>Filename: </string>
+      </property>
+     </widget>
+    </item>
+    <item row="11" column="1" colspan="3">
+     <widget class="QLineEdit" name="filename"/>
+    </item>
+   </layout>
+   <zorder>report_text_output</zorder>
+   <zorder>radio_type_input</zorder>
+   <zorder>location_label</zorder>
+   <zorder>rx_call_sign_label</zorder>
+   <zorder>Technology_label</zorder>
+   <zorder>tx_freq_input</zorder>
+   <zorder>rx_freq_input</zorder>
+   <zorder>rx_callsign_input</zorder>
+   <zorder>color_code</zorder>
+   <zorder>label</zorder>
+   <zorder>talk_group_input</zorder>
+   <zorder>tech_input</zorder>
+   <zorder>color_code_input</zorder>
+   <zorder>rx_radio_id_label</zorder>
+   <zorder>rx_radio_id_input</zorder>
+   <zorder>encryption_label</zorder>
+   <zorder>tx_radio_id_label</zorder>
+   <zorder>encryption_input</zorder>
+   <zorder>color_code_label</zorder>
+   <zorder>radio_type_label</zorder>
+   <zorder>talk_group_label</zorder>
+   <zorder>tx_freq_label</zorder>
+   <zorder>location_input</zorder>
+   <zorder>date_time_label</zorder>
+   <zorder>tx_callsign_input</zorder>
+   <zorder>classification_combobox</zorder>
+   <zorder>dateTimeEdit</zorder>
+   <zorder>tx_call_sign_label</zorder>
+   <zorder>rx_freq_label</zorder>
+   <zorder>tx_radio_id_input</zorder>
+   <zorder>genname</zorder>
+   <zorder>txrx_checkbox</zorder>
+   <zorder>gist_input</zorder>
+   <zorder>f_jack</zorder>
+   <zorder>gist_label</zorder>
+   <zorder>filename_label</zorder>
+   <zorder>filename</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1089</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources>
+  <include location="test/test.qrc"/>
+ </resources>
+ <connections/>
+</ui>
